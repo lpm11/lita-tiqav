@@ -2,14 +2,14 @@ require 'tiqav'
 
 module Lita
   module Handlers
-    class TiqavHandler < Handler
+    class Tiqav < Handler
       route /tiqav (.*)/i, :tiqav, command: false
 
       def tiqav(response)
         query = response.matches[0][0]
 
         begin
-          results = Tiqav.search(query)
+          results = ::Tiqav.search(query)
           raise if (results.empty?)
 
           url = results.first.url.to_s()
@@ -21,6 +21,6 @@ module Lita
       end
     end
 
-    Lita.register_handler(TiqavHandler)
+    Lita.register_handler(Tiqav)
   end
 end

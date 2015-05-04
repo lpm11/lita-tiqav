@@ -6,7 +6,7 @@ Lita.load_locales Dir[File.expand_path(
 
 require "lita/handlers/tiqav"
 
-Lita::Handlers::TiqavHandler.template_root File.expand_path(
+Lita::Handlers::Tiqav.template_root File.expand_path(
   File.join("..", "..", "templates"),
  __FILE__
 )

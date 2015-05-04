@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Lita::Handlers::TiqavHandler, lita_handler: true do
+describe Lita::Handlers::Tiqav, lita_handler: true do
   it { is_expected.to route_command("tiqav ちくわ").to(:tiqav) }
 
   describe "search" do
