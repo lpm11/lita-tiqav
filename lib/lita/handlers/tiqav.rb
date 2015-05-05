@@ -3,7 +3,7 @@ require 'tiqav'
 module Lita
   module Handlers
     class Tiqav < Handler
-      route /tiqav (.*)/i, :tiqav, command: false
+      route /^tiqav (.*)$/i, :tiqav, command: false
 
       def tiqav(response)
         query = response.matches[0][0]
